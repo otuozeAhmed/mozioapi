@@ -8,8 +8,8 @@ ENV PYTHONDONTWRITEBYTECODE 1
 WORKDIR /app
 
 COPY ./requirements.txt .
-RUN apk add postgresql-client postgresql-dev
-RUN apk add python3-gdal
+
+RUN pip install python3-gdal
 RUN pip install -r /requirements.txt
 
 
